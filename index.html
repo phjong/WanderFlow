@@ -385,6 +385,10 @@
 
                 <ul class="binding-list">
                     <li>
+                        <strong>⚠️ Extra Settings (IMPORTANT):</strong>
+                        You may need to navigate to Extra Settings tab and check "Return bindings with left hand" (or even "Return bindings with right hand") for certain apps (e. g. VRChat, Skyrim VR) to work with WanderFlow.
+                    </li>
+                    <li>
                         <strong>🕹️ Joystick and trackpad position:</strong>
                         WanderFlow uses these as movement output. Bind either joystick or trackpad position to the movement action in your SteamVR app.
                     </li>
@@ -462,17 +466,17 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <h3>🏃 Arm swing</h3>
-                        <p>Set <em>Hand locomotion</em> to <em>Simple back-and-forth swing</em> in the control panel to use this feature. Lean forward slightly and swing your arms back and forth to start moving. Keep palms vertical and swing fast to start running. Slow down or have palms face downward to stop running. Wear wrist weight to instensify your workout!</p>
+                        <p>Set <em>Hand locomotion</em> to <em>Simple back-and-forth swing</em> in the control panel to use this feature. Lean forward slightly, put one hand in front and one hand behind, and swing your arms back and forth to start moving. Keep palms vertical and swing fast to start running. Slow down or have palms face downward to stop running. Wear wrist weights to instensify your workout! (⚠️ Consult your doctor first, start light, and stop if you experience any discomfort)</p>
                     </div>
 
                     <div class="feature-card">
                         <h3>⚙️ Sagittal hand wheel</h3>
-                        <p>Set <em>Hand locomotion</em> to <em>Move hands in sagittal wheel motion</em> in the control panel to use this feature. Move your hands in a circular motion as if attached to wheels on your sides. You can move the wheel in either direction corresponding to forward and backward walking. Keep palms vertical and move hands fast to start running. Slow down or have palms face downward to stop running. Wear wrist weight to instensify your workout!</p>
+                        <p>Set <em>Hand locomotion</em> to <em>Move hands in sagittal wheel motion</em> in the control panel to use this feature. Move your hands in a circular motion as if attached to wheels on your sides. You can move the wheel in either direction corresponding to forward and backward walking. Keep palms vertical and move hands fast to start running. Slow down or have palms face downward to stop running.</p>
                     </div>
 
                     <div class="feature-card">
                         <h3>🕊️ Simple flap</h3>
-                        <p>Set <em>Flap</em> to <em>Simple flap</em> in the control panel to use this feature. Extend your arms to your left and right, then start flapping up and down.</p>
+                        <p>Set <em>Flap</em> to <em>Simple flap</em> in the control panel to use this feature. Extend your arms to your left and right, then start flapping up and down fast. Wear wrist weights when playing to rip those delts! (⚠️ Consult your doctor first, start light, and stop if you experience any discomfort)</p>
                     </div>
 
                     <div class="feature-card">
@@ -495,7 +499,7 @@
                 <div class="feature-grid">
                     <div class="feature-card">
                         <h3>🚶 Walk-in-place</h3>
-                        <p>After calibration, lean forward slightly and move your feet up and down. Small hops with both feet can activate running mode. Lean back to start walking backward. Note that this feature can even be used if your foot trackers and HMD do not share tracking coordinates (e. g. if you are using an Oculus headset with Vive trackers) with slightly reduced accuracy.</p>
+                        <p>After calibration, lean forward slightly and move your feet up and down. Small hops with both feet can activate running mode. Lean back to start walking backward. Note that this feature can even be used if your foot trackers and HMD do not share tracking coordinates (e. g. if you are using an Oculus headset with Vive trackers) with only slightly reduced accuracy.</p>
                     </div>
 
                     <div class="feature-card">
@@ -530,10 +534,29 @@
                 </div>
                 <div class="troubleshoot">
                     <h3>🚨 Common issues</h3>
-                    <p>If WanderFlow client cannot detect the driver:</p>
+                    <p><strong>If WanderFlow client cannot detect the driver:</strong></p>
                     <ul style="margin-left: 20px; margin-top: 15px;">
                         <li>✅ Check that WanderFlow Driver is installed in: <code>[SteamLocation]\steamapps\common\SteamVR\drivers\wanderflow\</code></li>
                         <li>✅ Unblock and enable WanderFlow in: <strong>SteamVR Settings → Startup/Shutdown → Manage Addons</strong></li>
+                    </ul>
+                    <p>.</p>
+                    <p><strong>Does not work!</strong> (despite that SteamVR Settings -> Controllers -> TEST CONTROLLER shows output)</p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>✅ (More details in <em>Client action binding</em> section) In SteamVR controller bindings UI, navigate to Extra Settings tab and enable "Return bindings with left hand" and save settings.</li>
+                        <li>✅ You may need to enable "Return bindings with right hand" as well.</li>
+                    </ul>
+                    <p>.</p>
+                    <p><strong>Arm swing not working:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>✅ You may need to increase the distance between your hands, especially along the sagittal(forward-backward) axis, to trigger movement</li>
+                        <li>✅ You can reduce "min hand distance" in the control panel to reduce the requirement above</li>
+                        <li>✅ Either lean forward slightly or disable Leaning detection in the control panel</li>
+                    </ul>
+                    <p>.</p>
+                    <p><strong>Walk-in-place not working:</strong></p>
+                    <ul style="margin-left: 20px; margin-top: 15px;">
+                        <li>✅ Make sure that WanderFlow is caliberated - see the <em>Caliberation</em> section</li>
+                        <li>✅ Either lean forward slightly or disable Leaning detection in the control panel</li>
                     </ul>
                 </div>
             </div>
