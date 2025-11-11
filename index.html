@@ -512,16 +512,55 @@
             <div class="section">
                 <div class="section-header">
                     <div class="section-icon">💡</div>
-                    <h2>Locomotion modifiers</h2>
+                    <h2>Config settings</h2>
                 </div>
                 <div class="feature-grid">
                     <div class="feature-card">
-                        <h3>↔️ Head tilt strafe</h3>
+                        <h3>Jump threshold</h3>
+                        <p>This controls how fast you need to move your head upward to register as a jump. A lower value makes jumping easier to trigger (more sensitive), while a higher value requires more forceful head movement. Adjust this based on your play style - if you're getting accidental jumps during normal movement, increase the threshold. If jumping feels unresponsive, decrease it.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Max acceleration</h3>
+                        <p>This determines how quickly your virtual movement responds to your physical actions. Lower values create smoother, more gradual acceleration and deceleration. Higher values provide instant response to your movements, feeling more direct but potentially more jarring and more sensitive to signal noise.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Max walk output</h3>
+                        <p>This sets the maximum virtual joystick/touchpad input value when walking (not running). A value of 1.0 means full stick deflection, while lower values cap your maximum walking speed. Use this to fine-tune how fast "walking" feels in games - some games have very fast default walk speeds that might feel like running.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Walk output multiplier</h3>
+                        <p>This is a multiplier for how far you move in-game compared to your real-life movement when walking (not running). Higher values amplify your in-game movement while lower values reduce it.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Run threshold</h3>
+                        <p>This is the speed threshold that determines when the system switches from walking to running mode when using arm-based locomotion. When your physical movement speed exceeds this value, the run output multiplier kicks in instead of walk output multiplier and the run button on the virtual WanderFlow controller is pressed. Set it lower if you want running to trigger easily with moderate movement, or higher if you only want vigorous movement to count as running.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Min hand distance for walk</h3>
+                        <p>This is the minimum forward/backward separation distance (not counting side-to-side or up-down separation) between your hands required to activate arm swing locomotion. This prevents accidental activation when your hands are close together. A higher value means you need more exaggerated arm swinging with one hand clearly ahead of the other to initiate locomotion. This distance is require to initiate arm-swing locomotion but is not required to keep it going - unless you stop moving your arms for brief amount of time. </p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Hand locomotion / Swim / Flap</h3>
+                        <p>Enables and chooses hand-based locomotion mode - see <em>Hand-based locomotion</em> section for details.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Walk-in-place min height</h3>
+                        <p>When using foot trackers, this sets how high you need to lift your feet off the ground to initiate locomotion. Lower values make it easier to activate (useful for subtle marching), while higher values require more pronounced stepping (reduces false triggers). This height is required to initiate walk-in-place locomotion but not required to keep it going - unless you set both feet down and stop moving them for a brief amount of time.  Note that setting it to zero completely disables walk-in-place.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Leaning detection</h3>
+                        <p>When enabled, the system detects when you physically lean your body forward or backward and uses this to determine walk-in-place and arm-swing movement direction. Leaning forward makes you walk/run forward, while leaning backward makes you move in reverse.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Roller skate</h3>
+                        <p>Enables roller skate locomotion - see <em>Foot-based locomotion</em> section for details.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Head tilt strafe</h3>
                         <p>When enabled, tilting your head adds sideways movement to arm swing, hand wheel, and walk-in-place locomotion.</p>
                     </div>
-
                     <div class="feature-card">
-                        <h3>🔄 Head tilt turn</h3>
+                        <h3>Head tilt turn</h3>
                         <p>When enabled, tilting your head while strafing causes rotation. Requires /input/turnstick bound to the look/yaw/rotation action in your SteamVR app.</p>
                     </div>
                 </div>
